@@ -36,7 +36,7 @@ namespace Sasha
             ground = GetComponent<CollisionDataRetriever>();
             controller = GetComponent<Controller>();
 
-            defaulfGravityScale = 2f;
+            defaulfGravityScale = 1f;
         }
 
         // Update is called once per frame
@@ -95,7 +95,7 @@ namespace Sasha
                     jumpPhase += 1;
                 }
 
-                jumpBufferCounter = 0;
+                jumpBufferCounter = 1;
                 coyoteCounter = 0;
                 jumpPhase += 1;
                 float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);

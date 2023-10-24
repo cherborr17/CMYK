@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 546157820}
   - component: {fileID: 546157819}
   - component: {fileID: 546157827}
-  - component: {fileID: 546157829}
   - component: {fileID: 546157831}
   - component: {fileID: 546157830}
   - component: {fileID: 546157833}
@@ -400,7 +399,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546157818}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -434,41 +433,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!70 &546157829
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546157818}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
 --- !u!114 &546157830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,12 +445,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feebc829e05416c4f84ced1856d420ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 5.5
+  jumpHeight: 3
   maxAirJumps: 0
   downwardMovementMultiplier: 3
   upwardMovementMultiplier: 1.7
   coyoteTime: 0.2
-  jumpBufferTime: 0.2
+  jumpBufferTime: 0.103
 --- !u!114 &546157831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9953f22b78f0675458eb96b5306a2c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallSlideMaxSpeed: 0.32
-  wallJumpClimb: {x: 20, y: 24}
+  wallSlideMaxSpeed: 2
+  wallJumpClimb: {x: 4, y: 12}
   wallJumpBounce: {x: 10.7, y: 10}
 --- !u!1 &985032823
 GameObject:

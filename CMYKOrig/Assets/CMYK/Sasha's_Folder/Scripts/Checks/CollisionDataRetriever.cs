@@ -11,9 +11,9 @@ namespace Sasha
         public bool onWall { get; private set; }
         public float friction { get; private set; }
 
-
         public Vector2 ContactNormal { get; private set; }
-                private void OnCollisionEnter2D(Collision2D collision)
+
+        private void OnCollisionEnter2D(Collision2D collision)
                 {
                     EvaluateCollision(collision);
                     RetrieveFriction(collision);
@@ -36,8 +36,8 @@ namespace Sasha
                 {
                 for (int i = 0; i < collision.contactCount; i++) 
                     {
-                    Vector2 normal = collision.GetContact(i).normal;
-                    onGround |= normal.y > 0.9f;
+                    ContactNormal = collision.GetContact(i).normal;
+                    onGround |= ContactNormal.y > 0.9f;
                     onWall = Mathf.Abs(ContactNormal.x) >= 0.9f;
                     }
                 }
