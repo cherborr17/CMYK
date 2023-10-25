@@ -10,7 +10,7 @@ namespace Sasha
     {
         //[SerializeField] private InputController1 input = null;
         [SerializeField, Range(0f, 10f)] private float jumpHeight = 3f;
-        [SerializeField, Range(0f, 5)] private int maxAirJumps= 0;
+        [SerializeField, Range(0f, 5)] private int maxAirJumps = 0;
         [SerializeField, Range(0f, 5f)] private float downwardMovementMultiplier = 3f;
         [SerializeField, Range(0f, 5f)] private float upwardMovementMultiplier = 1.7f;
         [SerializeField, Range(0f, 0.3f)] private float coyoteTime = 0.2f;
@@ -95,7 +95,7 @@ namespace Sasha
                     jumpPhase += 1;
                 }
 
-                jumpBufferCounter = 1;
+                jumpBufferCounter = 0;
                 coyoteCounter = 0;
                 jumpPhase += 1;
                 float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
